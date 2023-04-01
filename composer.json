@@ -1,0 +1,31 @@
+{
+	"name": "rock/phpunit",
+	"description": "phpunit with eclipse pdt integration for php 5.1.6 ",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Andre Nils",
+			"email": "nilzao@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.1.6",
+		"xrstf/composer-php52": "1.*"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "src/"
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"xrstf\\Composer52\\Generator::onPostInstallCmd"
+		],
+		"post-update-cmd": [
+			"xrstf\\Composer52\\Generator::onPostInstallCmd"
+		],
+		"post-autoload-dump": [
+			"xrstf\\Composer52\\Generator::onPostInstallCmd"
+		]
+	}
+}
